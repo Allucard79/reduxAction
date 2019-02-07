@@ -29,18 +29,18 @@ function editComment(id, text) {
     };
 }
 
-function thumbUpComment(id, thumb) {
+function thumbUpComment(id, votes) {
     return {
         type: THUMB_UP_COMMENT,
         id,
-        thumb: thumb++
+        votes: votes + 1
     }
 }
 
-function thumbDownComment(id, thumb) {
+function thumbDownComment(id, votes) {
     return {
         type: THUMB_DOWN_COMMENT,
         id,
-        thumb: thumb--
+        votes: votes - 1
     }
 }
